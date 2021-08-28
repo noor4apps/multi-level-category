@@ -3,10 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Level1Category extends Model
 {
+    use HasTranslations;
+
     protected $guarded = [];
+
+    public $translatable = ['name'];
 
     public function level2Categories()
     {
